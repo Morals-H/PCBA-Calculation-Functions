@@ -76,12 +76,12 @@ endfunction
 
 function x = rSer(a, b)
     x = a + b;
-    mprintf("Series Resistance:\n %.3f Ω\n", x)
+    mprintf("Series Resistance:\n%.3f Ω\n", x)
 endfunction
 
 function x = rPar(a, b)
     x = (1/a + 1/b)^-1;
-    mprintf("Parallel Resistance:\n %.3f Ω\n", x)
+    mprintf("Parallel Resistance:\n%.3f Ω\n", x)
 endfunction
 
 ///////////////
@@ -90,13 +90,13 @@ endfunction
 
 function x = lSer(a, b)
     x = a + b;
-    mprintf("Series Inductance: \n")
+    mprintf("Series Inductance:\n")
     dispInd(x)
 endfunction
 
 function x = lPar(a, b)
     x = (1/a + 1/b)^-1;
-    mprintf("Parallel Inductance: \n")
+    mprintf("Parallel Inductance:\n")
     dispInd(x)
 endfunction
 
@@ -118,13 +118,13 @@ endfunction
 
 function x = cSer(a, b)
     x = (1/a + 1/b)^-1;
-    mprintf("Total Series Capacitance: \n")
+    mprintf("Total Series Capacitance:\n")
     dispCap(x)
 endfunction
 
 function x = cPar(a, b)
     x = a + b;
-    mprintf("Total Parallel Capacitance: \n")
+    mprintf("Total Parallel Capacitance:\n")
     dispCap(x)
 endfunction
 
@@ -146,17 +146,17 @@ endfunction
 
 function x = lReact(a, b)
     x = 2 * %pi * b * a;
-    mprintf("Inductive Reactance:\n %.3f Ω\n", x)
+    mprintf("Inductive Reactance:\n%.3f Ω\n", x)
 endfunction
 
 function x = cReact(a, b)
     x = 1 / (2 * %pi * b * a);
-    mprintf("Capacitive Reactance:\n %.3f Ω\n", x)
+    mprintf("Capacitive Reactance:\n%.3f Ω\n", x)
 endfunction
 
 function x = tReact(a, b)
     x = a - b;
-    mprintf("Total Reactance:\n %.3f Ω\n", x)
+    mprintf("Total Reactance:\n%.3f Ω\n", x)
 endfunction
 
 //////////////
@@ -165,13 +165,13 @@ endfunction
 
 function x = zRect(a, b)
     x = a + b*%i;
-    mprintf("Rectangular form: %.3f + %.3fi Ω\n", real(x), imag(x))
+    mprintf("Rectangular form:\n%.3f + %.3fi Ω\n", real(x), imag(x))
 endfunction
 
 function zPolar(a, b)
     x = sqrt(a^2 + b^2);
     theta = atan(b / a) * 180 / %pi;
-    mprintf("Polar form: %.3f ∠ %.3f° Ω\n", x, theta)
+    mprintf("Polar form:\n%.3f ∠ %.3f° Ω\n", x, theta)
 endfunction
 
 ////////////////
